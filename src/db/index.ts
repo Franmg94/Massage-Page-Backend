@@ -1,5 +1,8 @@
 // Import mongoose with type definitions
 import mongoose from "mongoose";
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 // Sets the MongoDB URI for our app to have access to it.
 // If no env has been set, we dynamically set it to whatever the folder name was upon the creation of the app
