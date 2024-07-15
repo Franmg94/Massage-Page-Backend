@@ -1,0 +1,1 @@
+{"version":3,"file":"ContactMessage.d.ts","sourceRoot":"","sources":["../../src/models/ContactMessage.ts"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;AAAA,OAAO,EAAiB,QAAQ,EAAE,MAAM,UAAU,CAAC;AAEnD,UAAU,eAAgB,SAAQ,QAAQ;IACxC,IAAI,EAAE,MAAM,CAAC;IACb,KAAK,EAAE,MAAM,CAAC;IACd,OAAO,EAAE,MAAM,CAAC;CACjB;AAWD,QAAA,MAAM,mBAAmB;;QAAiE,CAAC;AAE3F,eAAe,mBAAmB,CAAC"}
