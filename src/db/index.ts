@@ -6,12 +6,14 @@ dotenv.config();
 
 const app = express();
 
-// Use the PORT environment variable or default to 3000
 const port = process.env.PORT || 3000;
 
-// Sets the MongoDB URI for our app to have access to it.
-// If no env has been set, we dynamically set it to whatever the folder name was upon the creation of the app
-const MONGO_URI: string = process.env.DATABASE_URL || "mongodb://0.0.0.0:27017/massage-api";
+// Ensure DATABASE_URL environment variable is set
+if (!process.env.DATABASE_URL) {
+  throw new Error('DATABASE_URL environment variable is not defined');
+}
+
+const MONGO_URI: string = process.env.DATABASE_URL;
 
 mongoose
   .connect(MONGO_URI)
@@ -20,11 +22,16 @@ mongoose
     console.log(`Connected to Mongo! Database name: "${dbName}"`);
   })
   .catch((err: Error) => {
-    console.error("Error connecting to mongo: ", err);
+    console.error('Error connecting to mongo: ', err);
   });
 
 app.get('/', (req, res) => {
   res.send('Hello, World!');
+});
+
+// Health check endpoint
+app.get('/health', (req, res) => {
+  res.status(200).send('OK');
 });
 
 // Start the server and listen on the specified port
