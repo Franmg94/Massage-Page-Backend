@@ -3,7 +3,7 @@ import logger from "morgan";
 import cookieParser from "cookie-parser";
 import cors from "cors";
 
-const FRONTEND_URL: string = process.env.ORIGIN || "http://localhost:3000";
+const FRONTEND_URL: string = "https://body-treatments-berlin.netlify.app/";
 
 // Middleware configuration
 export default (app: express.Application): void => {
