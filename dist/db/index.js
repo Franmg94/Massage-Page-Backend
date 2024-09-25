@@ -12,7 +12,7 @@ const mongoose_1 = __importDefault(require("mongoose"));
 const dotenv_1 = __importDefault(require("dotenv"));
 dotenv_1.default.config();
 const app = (0, express_1.default)();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 10000;
 // Ensure MONGODB_URI environment variable is set
 if (!process.env.MONGODB_URI) {
   throw new Error("MONGODB_URI environment variable is not defined");

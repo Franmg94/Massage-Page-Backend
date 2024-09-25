@@ -25,11 +25,12 @@ This project leverages modern backend technologies to create a secure and effici
 
 ## Development Approach
 
-This backend uses best practices for security and efficiency, with a focus on creating a seamless integration with the frontend React application. 
+This backend uses best practices for security and efficiency, with a focus on creating a seamless integration with the frontend React application.
 
 ## Current Status
 
 - **Completed**:
+
   - Basic server setup
   - User authentication endpoints
   - Booking management endpoints
@@ -49,30 +50,30 @@ This backend uses best practices for security and efficiency, with a focus on cr
 
 1. Clone the repository:
 
-    ```bash
-    git clone https://github.com/your-username/body-treatments-berlin-backend.git
-    cd body-treatments-berlin-backend
-    ```
+   ```bash
+   git clone https://github.com/your-username/body-treatments-berlin-backend.git
+   cd body-treatments-berlin-backend
+   ```
 
 2. Install dependencies:
 
-    ```bash
-    npm install
-    ```
+   ```bash
+   npm install
+   ```
 
 3. Create a `.env` file in the root directory and add the following environment variables:
 
-    ```env
-    PORT=5000
-    MONGO_URI=your_mongodb_uri
-    JWT_SECRET=your_jwt_secret
-    ```
+   ```env
+   PORT=5000
+   MONGODB_URI=your_mongodb_uri
+   JWT_SECRET=your_jwt_secret
+   ```
 
 4. Start the server:
 
-    ```bash
-    npm start
-    ```
+   ```bash
+   npm start
+   ```
 
 ### Dependencies
 
@@ -91,3 +92,4 @@ This project uses the following dependencies:
   "mongoose": "^8.4.0",
   "morgan": "^1.10.0"
 }
+```
