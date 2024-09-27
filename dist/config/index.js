@@ -7,7 +7,6 @@ const express_1 = __importDefault(require("express"));
 const morgan_1 = __importDefault(require("morgan"));
 const cookie_parser_1 = __importDefault(require("cookie-parser"));
 const cors_1 = __importDefault(require("cors"));
-const FRONTEND_URL = process.env.ORIGIN || "http://localhost:3000";
 // Middleware configuration
 exports.default = (app) => {
     // Because this is a server that will accept requests from outside and it will be hosted on a server with a `proxy`, express needs to know that it should trust that setting.
@@ -15,7 +14,7 @@ exports.default = (app) => {
     app.set("trust proxy", 1);
     // Controls a very specific header to pass headers from the frontend
     app.use((0, cors_1.default)({
-        origin: [FRONTEND_URL]
+        origin: [process.env.ORIGIN || "http://localhost:5173"],
     }));
     // In development environment the app logs
     app.use((0, morgan_1.default)("dev"));
